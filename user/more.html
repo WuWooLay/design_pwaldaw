@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title> Pwal Daw | User Home DashBoard </title>
+
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" sizes="16x16" />
+    <meta name="theme-color" content="#88d2ff">
+
+
+    <link rel="stylesheet" href="/css/bootstrap-grid.css">
+    <link rel="stylesheet" href="/css/multi_container.css">
+    <link rel="stylesheet" href="/css/loader.css">
+    <link rel="stylesheet" href="/css/helper.css">
+    <link rel="stylesheet" href="/css/team.css">
+    <link rel="stylesheet" href="/css/user.css">
+    <link rel="stylesheet" href="/css/more.css">
+
+    <script src="/js/jquery-3.3.1.min.js"></script>
+
+    <script>
+
+        $(document).ready( function () {
+
+            setTimeout(function () {
+                $('#cover_loader_div').fadeOut('slow');
+                $("#main").removeClass('hide_display');
+            }, 500);
+
+            // Modal_Box Setting
+            
+            $('#modal_box_opo').click( function () {
+                $('#model_box_setting_container').addClass('hide_display');
+            });
+
+            $('#cancel_modal_setting_box').click( function () {
+                $('#model_box_setting_container').addClass('hide_display');
+            });
+
+            $('#mobile_setting').click(function () {
+                $('#model_box_setting_container').removeClass('hide_display');
+            });
+
+            // Modal_Box Setting End
+
+        });
+    
+    </script>
+
+
+    <!-- For More Page Script -->
+    <script>
+        $(document).ready( function () {
+
+            $.each($('.more-img-data'), function (k, v) {
+                v.style.backgroundImage = 'url("'+v.dataset.background+'")';
+            });
+
+            var normal_price = 0;
+            var vip_price = 0;
+            var total_price = 0;
+
+            // Modal Box Pending
+            var text_success = function () {
+                $('#model_box_pending_container').html('');
+                var text = 'Successfully Pending Your Post';
+                var e = ('<div class="model_box_pending_container"><div><p class="margin-0 text-center">'+text+'<object class="model_box_pending_container_svg" data="/images/multi_svg/more_right_animate.svg" type="image/svg+xml"></object></p></div></div>');
+                $('#model_box_pending_container').append(e);
+                $('#model_box_pending_container').removeClass('hide_display');
+                
+                setTimeout( function () {
+                    $('#model_box_pending_container').addClass('hide_display');
+                }, 1500);
+            }
+            
+            var total_price_show = function () {
+                total_price = normal_price + vip_price;
+                $('#total_box_show').html( total_price + ' MMK')
+            }
+
+            $('#buy_now_button').click( function () {
+                if(total_price == 0 ) {
+                    alert('Plz Add Ticket First Sir . ');
+                    return false;
+                }else{
+                   //Post Api
+                   $('#buy_now_loader').removeClass('hide_display');
+
+                   setTimeout(function () {
+                       $('#buy_now_loader').addClass('hide_display');
+                       text_success();
+                   } ,1000);
+
+                }
+            });
+
+            // Normal Box 
+            $('#normal_box').change( function (e) {
+
+                var this_mmk = e.target.dataset.kyats;
+                var this_left = e.target.dataset.left;
+                
+                var count = e.target.value;
+               
+                if( count > this_left ) {
+                    alert('There are only ' + this_left + ' tickets ! \n So You Can\'t Select ' + count + ' tickets');
+                    e.target.value = this_left;
+                    normal_price = this_mmk * this_left;
+                    total_price_show();
+                    return false;
+                } else {
+                    normal_price = this_mmk * count;
+                    console.log('normal_price', normal_price);
+                    total_price_show();
+                }
+
+            });
+            
+            // Vip Box
+            $('#vip_box').change( function (e) {
+
+                var this_mmk = e.target.dataset.kyats;
+                var this_left = e.target.dataset.left;
+
+                var count = e.target.value;
+
+                if( count > this_left ) {
+                    alert('There are only ' + this_left + 'tickets ! \n So You Can\'t Select ' + count + ' tickets');
+                    e.target.value = this_left;
+                    vip_price = this_mmk * this_left;
+                    total_price_show();
+                    return false;
+                } else {
+                    vip_price = this_mmk * count;
+                    console.log('vip_price', normal_price);
+                    total_price_show();
+                }
+
+             });
+
+
+        });
+    </script>
+    <!-- For More Page Script End -->
+
+</head>
+<body>
+
+    <!-- Main Content -->
+    <main class="hide_display" id="main">
+
+        <!-- Multi-Contianer Pwal Daw Start -->
+        <div class="multi-container-pwaldaw">
+
+            <!-- Fixed Top Nav Container -->
+            <div class="multi-container-fixed-top-nav"> 
+
+                <!-- Left Side Container Fluid -->
+                <div class="container-fluid">
+
+                    <div class="row md-hide">
+
+                        <div class="col-md-9 padding-0">
+                            <!-- Link List And Icon -->
+                            <nav class="nav">
+                                    <ul class="external_link">
+                                        <li>
+                                            <a class="home" href="/user"> Home </a>
+                                        </li>
+                                        <li>
+                                            <a class="list" href="/user/list.html"> Your List </a>
+                                        </li>
+
+                                        <li class="top-bar-search-input-container">
+                                            <form action="" method="get">
+
+                                                <div class="top-bar-search-input-container-div">
+                                                    <input name="search" class="top-bar-search-input" type="text" placeholder="Search">
+                                                </div>
+
+                                            </form>
+                                        </li>
+        
+                                    </ul>
+                            </nav>
+                            <!-- Link List And Icon End-->
+                        </div>
+                        
+                        <div class="col-md-3 padding-0">
+                            <nav class="nav">
+                                <ul class="external_link padding-0 ">
+
+                                    <li class="">
+                                        <a class="profile_list" href="/user/profile.html">
+                                                    <img src="/images/team/lmp.jpg" alt="">
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a class="logout" href="/">
+                                            Logout
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </nav>
+                        </div>
+                    
+                    </div>
+                   
+                </div>
+                <!-- Left Side Container Fluid End-->
+                
+
+                <!-- Mobile Veiw Logo -->
+                <header class="nav-mobile-header">
+                    <div>
+                        <a href="/">
+                            <img class="nav-mobile-header-img" src="/images/multi_svg/pwal_daw_white_logo.png" alt="">
+                        </a>
+                    </div>
+                </header>
+                <!-- Mobile Veiw Logo End-->
+
+            </div>
+            <!-- Fixed Top Nav Container End-->
+
+            <!-- Fixed Mobile View Bottom Nav For User -->
+            <div class="multi-container-fixed-bottom-nav">
+                 <!-- Link List And Icon -->
+                    <div class="container-fluid padding-0">
+                        <div class="row">
+                            <div class="col-3 fixed-bottom-nav padding-0">
+                                <a class="home" href="/user">  </a>
+                            </div>
+                            <div class="col-3 fixed-bottom-nav padding-0">
+                                <a class="list" href="/user/list.html">  </a>
+                            </div>
+                            <div class="col-3 fixed-bottom-nav padding-0">
+                                <a class="search" href="/user/search.html">  </a>
+                            </div>
+                            <div class="col-3 fixed-bottom-nav padding-0">
+                                    <a class="setting" href="#!" id="mobile_setting">  </a>
+                            </div>
+                        </div>
+                    </div>
+                 <!-- Link List And Icon End-->
+            </div>
+            <!-- Fixed Mobile View Bottom Nav For User End-->
+            
+            <!-- Content Section -->
+            <section>
+                <div class="multi-content-container padding-xs-0">
+
+                    <!-- Content HEre -->
+
+                         <!-- Modal For Pending SUccessfully -->
+                         <div class="hide_display" id="model_box_pending_container">
+                             
+                         </div>
+                        <!-- Modal For Pending SUccessfully End -->
+
+                        <div class="container-fluid margin-top-1">
+                            
+                            <!--User Page First Row -->
+                            <div class="row">
+
+                                    <!-- Left Cards ANd Events Tickets Show -->
+                                    <div class="col-lg-8  padding-0 margin-bottom-1">
+                                        
+                                        <!-- All Container -->
+                                        <div class="">
+                                            
+                                            <!-- Image -->
+                                            <div class="more-img-container">
+                                                <div class="more-img-data bg-img" data-background="/images/concepts/taylor.jpg">
+
+                                                </div>
+                                            </div>
+                                            <!-- Image End -->
+
+                                            <!-- Shedules And Title -->
+                                            <div class="more-shadule-and-title white-card-border margin-top-1">
+                                                <h3 class="margin-0 "> Taylor Swift Concepts </h3>
+                                               
+                                                <div>
+                                                    
+                                                    <span class="more-day-show">
+                                                            August 25, 2018 - August 25, 2018
+                                                    </span>
+                                                    
+                                                    <span class="more-time-show">
+                                                            at 4:00 pm to 11:00 pm
+                                                    </span>
+                                                </div>
+
+                                                <div>
+                                                    <span class="more-location">
+                                                            Hotel, Yangon
+                                                    </span>
+                                                </div>
+
+                                            </div>
+                                            <!-- Shedules And Title End -->
+
+                                            <!-- Buy Ticket If Not Only Show Information  -->
+                                            <div class="white-card-border margin-top-1">
+                                                <div class="buy-ticket">
+                                                    <h3 class="margin-top-0"> Buy Ticket</h3>
+                                                    
+                                                    <!-- Ticket Container Start -->
+                                                    <div class="container-fluid">
+
+                                                        <!-- Ticket Header -->
+                                                        <div class="row bg-default text-default md-hide">
+                                                            <div class="col-3">
+                                                                <div class="padding-1">
+                                                                    <h4 class="margin-0">Name</h4>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-3">
+                                                                <div class="padding-1">
+                                                                    <h4 class="margin-0">Ticket</h4>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-3">
+                                                                <div class="padding-1">
+                                                                    <h4 class="margin-0">Quantity</h4>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-3">
+                                                                <div class="padding-1">
+                                                                    <h4 class="margin-0">Price</h4>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- Ticket Header End -->
+
+                                                        <!-- Normal Ticket -->
+                                                        <div class="row more-ticket text-default ">
+                                                                <div class="col-6 col-sm-3">
+                                                                    <div class="padding-1">
+                                                                        <h4 class="margin-0"> Normal</h4>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-6 col-sm-3">
+                                                                    <div class="padding-1">
+                                                                        <h4 class="margin-0"> 4 left </h4>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-6 col-sm-3">
+                                                                        <div class="">
+                                                                            <h4 class="margin-0">
+                                                                                <select class="more-ticket-select-box" name="" id="normal_box" data-left="4" data-kyats="1000">
+                                                                                        <option selected value="0">0</option>
+                                                                                        <option value="1">1</option>
+                                                                                        <option value="2">2</option>
+                                                                                        <option value="3">3</option>
+                                                                                        <option value="4">4</option>
+                                                                                        <option value="5">5</option>
+                                                                                </select>
+                                                                            </h4>
+                                                                        </div>
+                                                                </div>
+                                                                <div class="col-6 col-sm-3">
+                                                                    <div class="padding-1">
+                                                                        <h4 class="margin-0"> 1000 MMK</h4>
+                                                                    </div>
+                                                                </div>
+                                                        </div>
+                                                        <!-- Normal Ticket End -->
+
+                                                        <!-- Vip Ticket -->
+                                                        <div class="row more-ticket text-default ">
+                                                                <div class="col-6 col-sm-3">
+                                                                    <div class="padding-1">
+                                                                        <h4 class="margin-0"> Vip</h4>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-6 col-sm-3">
+                                                                    <div class="padding-1">
+                                                                        <h4 class="margin-0"> 0 left </h4>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-6 col-sm-3">
+                                                                    <div class="">
+                                                                        <h4 class="margin-0">
+                                                                            <select class="more-ticket-select-box" name="" data-left="0"  id="vip_box" data-kyats="3000">
+                                                                                    <option selected value="0">0</option>
+                                                                                    <option value="1">1</option>
+                                                                                    <option value="2">2</option>
+                                                                                    <option value="3">3</option>
+                                                                                    <option value="4">4</option>
+                                                                                    <option value="5">5</option>
+                                                                            </select>
+                                                                        </h4>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-6 col-sm-3">
+                                                                    <div class="padding-1">
+                                                                        <h4 class="margin-0"> 3000 MMK</h4>
+                                                                    </div>
+                                                                </div>
+                                                        </div>
+                                                        <!-- Vip Ticket End -->
+
+                                                        <!-- Total -->
+                                                        <div class="row more-ticket text-default ">
+                                                                <div class="col-6 col-sm-9">
+                                                                    <div class="padding-1">
+                                                                        <h4 class="margin-0 more-total-text"> Totals</h4>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-6 col-sm-3">
+                                                                    <div class="padding-1">
+                                                                        <h4 class="margin-0" id="total_box_show"> 0 MMK</h4>
+                                                                    </div>
+                                                                </div>
+                                                        </div>
+                                                        <!-- Total End -->
+
+                                                        <!-- Buy Now -->
+                                                        <div class="row more-ticket text-default ">
+                                                                <div class="col-6 col-sm-9">
+                                                                    <div class="padding-1">
+                                                                        <h4 class="margin-0 more-total-text"> Buy Ticket Now </h4>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-6 col-sm-3">
+                                                                    <div class="padding-top-1 more-buy-button">
+                                                                        <button id="buy_now_button"  type="button" class="pwal-daw-btn small light">
+                                                                            Buy Now
+                                                                        </button>
+                                                                        <div id="buy_now_loader" class="hide_display">
+                                                                                <object class="buy-more-ripple" data="/images/multi_svg/more_ripple_loading.svg" type="image/svg+xml"></object>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                        </div>
+                                                        <!-- Buy Now End -->
+
+                                                    </div>
+                                                    <!-- Ticket Container Start End-->
+
+                                                </div>
+                                            </div>
+                                            <!-- Buy Ticket If Not Only Show Information  End-->
+
+                                            <!-- Information -->
+                                            <div class="white-card-border margin-top-1">
+                                                <!-- Information Header -->
+                                                <div>
+                                                    <h3 class="margin-0"> Information </h3>
+                                                </div>
+                                                <!-- Information Header End -->
+
+                                                <!-- Information Paragraph -->
+                                                <div>
+                                                    <p class="text-default">
+                                                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia, quae nisi. Incidunt voluptates odio adipisci culpa ipsum placeat nobis soluta! Laborum rerum provident quo. Doloribus architecto enim quod sit vel.
+                                                    </p>
+                                                </div>
+                                                <!-- Information Paragraph End-->
+
+                                            </div>
+                                            <!-- Information End-->
+
+                                            <div class="margin-bottom-1">
+
+                                            </div>
+
+                                        </div>
+                                        <!-- All Container End-->
+
+                                    </div>
+                                    <!-- Left Cards ANd Events Tickets Show End-->
+
+                                    <!-- Right Profile Picture & Role -->
+                                    <div class="col-lg-4 lg-hide user-right-role">
+                                        <div class="white-card-border margin-bottom-1">
+                                           <div class="user_right_side_container">
+                                               
+                                               <a href="/user/profile.html"> 
+                                                   <img src="/images/team/lmp.jpg" class="right_side_profile_picture" alt="">
+                                               </a>
+                                               
+                                               <a href="/user/profile.html"> Lwin Moe Paing </a>
+                                               <p> User </p>
+
+                                           </div>
+                                        </div>
+
+                                        <div class="white-card-border margin-bottom-1">
+                                             <div class="right-side-logo-container">
+                                                <h4> Welcome to Pwal Daw </h4>
+                                                <img class="logo" src="/images/multi_svg/pwal_daw_logo.png" alt="">
+                                             </div>
+                                        </div>
+
+                                        <div class="white-card-border">
+                                                <div class="right-side-logo-container">
+                                                   <h5> Assigment Project for AceInspiration </h5>
+                                                   <a target="_blank" href="https://www.facebook.com/aceinspiration">
+                                                       <img  class="logo" src="/images/multi_svg/ace_inspiration.png" alt="">
+                                                   </a>
+                                                </div>
+                                           </div>
+
+                                    </div>
+                                    <!-- Right Profile Picture & Role -->
+                            
+                            </div>
+                            <!--User Page First Row End -->
+
+                        </div>
+                    <!-- Content HEre End -->
+
+                </div>
+            </section>
+            <!-- Content Section -->
+
+        </div>
+        <!-- Multi-Contianer Pwal Daw End -->
+
+
+    </main>
+    <!-- Main Content End-->
+
+    <!-- Modal For Setting -->
+    <div class="hide_display" id="model_box_setting_container">
+        <!-- Modal Container -->
+        <div class="model-box-opo" data-bg="" id="modal_box_opo">
+        </div>
+        <!-- Modal Container End-->
+        <div class="model-box-setting">
+                <ul>
+                    <li>
+                        <a href="/user/profile.html"> Profile Setting </a>
+                    </li>
+                    <li>
+                        <a href="/"> Logout </a>
+                    </li>
+                    <li>
+                        <a href="#!" id="cancel_modal_setting_box"> Cancel  </a>
+                    </li>
+                </ul>
+        </div>
+    </div>
+    <!-- Modal For Setting End-->
+
+    <!-- Loader -->
+    <div class="cover_loader_div" id="cover_loader_div">
+          
+            <div class="swapping-squares-spinner">
+                    <div class="square"></div>
+                    <div class="square"></div>
+                    <div class="square"></div>
+                    <div class="square"></div>
+            </div>
+
+            <h3> Pwal Daw </h3>
+
+    </div>
+    <!-- Loader End -->
+
+    
+</body>
+</html>

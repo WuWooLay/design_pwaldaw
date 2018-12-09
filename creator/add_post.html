@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title> Pwal Daw | Creator Home DashBoard </title>
+
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" sizes="16x16" />
+    <meta name="theme-color" content="#88d2ff">
+
+
+    <link rel="stylesheet" href="/css/bootstrap-grid.css">
+    <link rel="stylesheet" href="/css/multi_container.css">
+    <link rel="stylesheet" href="/css/loader.css">
+    <link rel="stylesheet" href="/css/helper.css">
+    <link rel="stylesheet" href="/css/team.css">
+    <link rel="stylesheet" href="/css/user.css">
+    <link rel="stylesheet" href="/css/creator.css">
+    <link rel="stylesheet" href="/css/datedropper.css">
+    <link rel="stylesheet" href="/css/timepicker.css">
+    <link rel="stylesheet" href="/css/radio.css">
+    <link rel="stylesheet" href="/css/clear-switch.css">
+
+
+    <script src="/js/jquery-3.3.1.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+            setTimeout(function () {
+                $('#cover_loader_div').fadeOut('slow');
+                $("#main").removeClass('hide_display');
+            }, 500);
+
+            // Modal_Box Setting
+
+            $('#modal_box_opo').click(function () {
+                $('#model_box_setting_container').addClass('hide_display');
+            });
+
+            $('#cancel_modal_setting_box').click(function () {
+                $('#model_box_setting_container').addClass('hide_display');
+            });
+
+            $('#mobile_setting').click(function () {
+                $('#model_box_setting_container').removeClass('hide_display');
+            });
+
+            // Modal_Box Setting End
+
+        });
+    </script>
+
+    <!-- Script For DateDropper -->
+    <script src="/js/datedropper.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.time').dateDropper();
+        });
+    </script>
+    <!-- Script For DateDropper End-->
+
+    <!-- Script For TimePicker -->
+    <script src="/js/mdtimepicker.js"></script>
+    
+    <script>
+        $(document).ready(function () {
+            $('.time-picker').mdtimepicker();
+        });
+    </script>
+    <!-- Script For TimePicker End-->
+
+
+    <!-- Script For Noti -->
+    <script>
+        $(document).ready(function () {
+
+            var c = 1;
+            var x = setInterval(function () {
+
+                if (c > 4) {
+                    clearInterval(x);
+                    document.getElementById('top_noti').innerHTML = ' ';
+                    document.getElementById('bottom_noti').innerHTML = ' ';
+                    return false;
+                }
+                document.getElementById('top_noti').innerHTML = '<span class="noti-span"> ' + c +
+                    ' </span>';
+                document.getElementById('bottom_noti').innerHTML = '<span class="noti-span"> ' + c +
+                    ' </span>';
+                console.log(c);
+                c++;
+
+            }, 4000)
+
+        });
+    </script>
+    <!-- Script For Noti -->
+
+    <!-- Price On Off -->
+    <script>
+        $(document).ready(function () {
+            $('#free_post').on('change', function () {
+                // console.dir($(this).val());
+                console.log('js=>', this.checked);
+                
+                
+                if( this.checked ) {
+                    $('#price_container').addClass('hide_display');
+                } else {
+                    $('#price_container').removeClass('hide_display');
+                }
+                $('#free_post_hidden').val(this.checked);
+
+
+                console.log($('#free_post_hidden').val());
+
+            });
+        });
+    </script>
+    <!-- Price On Off End-->
+
+</head>
+
+<body>
+
+    <!-- Main Content -->
+    <main class="hide_display" id="main">
+
+        <!-- Multi-Contianer Pwal Daw Start -->
+        <div class="multi-container-pwaldaw">
+
+            <!-- Fixed Top Nav Container -->
+            <div class="multi-container-fixed-top-nav">
+
+                <!-- Left Side Container Fluid -->
+                <div class="container-fluid">
+
+                    <div class="row md-hide">
+
+                        <div class="col-md-9 padding-0">
+                            <!-- Link List And Icon -->
+                            <nav class="nav">
+                                <ul class="external_link">
+                                    <li>
+                                        <a class="home" href="/creator"> Home </a>
+                                    </li>
+                                    <li>
+                                        <a class="creator_card" href="/creator/card_list.html"> Card </a>
+                                    </li>
+                                    <li>
+                                        <a class="noti" href="/creator/noti.html">
+                                            Noti
+                                            <span id="top_noti">
+                                                <span class="noti-span"> 1 </span>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="add" href="/creator/add_post.html"> Add </a>
+                                    </li>
+
+                                </ul>
+                            </nav>
+                            <!-- Link List And Icon End-->
+                        </div>
+
+                        <div class="col-md-3 padding-0">
+                            <nav class="nav">
+                                <ul class="external_link padding-0 ">
+
+                                    <li class="">
+                                        <a class="profile_list" href="/creator/profile.html">
+                                            <img src="/images/team/lmp.jpg" alt="">
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a class="logout" href="/">
+                                            Logout
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </nav>
+                        </div>
+
+                    </div>
+
+                </div>
+                <!-- Left Side Container Fluid End-->
+
+
+                <!-- Mobile Veiw Logo -->
+                <header class="nav-mobile-header">
+                    <div>
+                        <a href="/">
+                            <img class="nav-mobile-header-img" src="/images/multi_svg/pwal_daw_white_logo.png" alt="">
+                        </a>
+                    </div>
+                </header>
+                <!-- Mobile Veiw Logo End-->
+
+            </div>
+            <!-- Fixed Top Nav Container End-->
+
+            <!-- Fixed Mobile View Bottom Nav For User -->
+            <div class="multi-container-fixed-bottom-nav">
+                <!-- Link List And Icon -->
+                <div class="container-fluid padding-0">
+                    <div class="row">
+                        <div class="col-3 fixed-bottom-nav padding-0">
+                            <a class="home" href="/creator/"> </a>
+                        </div>
+                        <div class="col-2 fixed-bottom-nav padding-0">
+                            <a class="creator_card" href="/creator/card_list.html"> </a>
+                        </div>
+                        <div class="col-2 fixed-bottom-nav padding-0">
+                            <a class="noti" href="/creator/noti.html">
+                                <span id="bottom_noti">
+                                    <span class="noti-span"> 1</span>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="col-2 fixed-bottom-nav padding-0">
+                            <a class="add" href="/creator/add_post.html"> </a>
+                        </div>
+                        <div class="col-2 fixed-bottom-nav padding-0">
+                            <a class="setting" href="#!" id="mobile_setting"> </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Link List And Icon End-->
+            </div>
+            <!-- Fixed Mobile View Bottom Nav For User End-->
+
+            <!-- Content Section -->
+            <section>
+                <div class="multi-content-container padding-xs-0">
+
+                    <!-- Content HEre -->
+                    <div class="container-fluid margin-top-1">
+
+
+
+                        <!--User Page First Row -->
+                        <div class="row">
+
+
+
+                            <!-- Left Cards ANd Events Tickets Show -->
+                            <div class="col-lg-8  padding-0 margin-bottom-1">
+                                <div class="">
+
+                                    <!-- Added List -->
+                                    <div class="white-card-border margin-bottom-1">
+                                        <h3 class="margin-0"> Created Lists </h3>
+                                    </div>
+                                    <!-- Added List -->
+
+                                    <!-- Upload FOrm -->
+                                    <div>
+
+                                        <div class="white-card-border">
+
+                                            <!-- Form Container -->
+                                            <form action="" class="pwal-daw-form">
+
+                                                <!-- Title -->
+                                                <div class="form-group">
+                                                    <label for="title"> Title </label>
+                                                    <input type="text" class="small" id="title">
+                                                </div>
+                                                <!-- Title End-->
+
+                                                <!-- Information -->
+                                                <div class="form-group">
+                                                    <label for="information"> Information </label>
+                                                    <textarea class="small" id="information" rows="3"></textarea>
+                                                </div>
+                                                <!-- Information End-->
+
+                                                <!-- Date Limit -->
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        <div class="form-group">
+                                                            <label for="start_date"> Start Date </label>
+                                                            <input type="text" class="small time" data-theme="my-style" data-lang="en" data-large-mode="true" data-modal="true" data-min-year="2018"
+                                                                data-large-default="true" data-format="d-m-Y" id="start_date">
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <div class="form-group">
+                                                            <label for="end_date"> End Date </label>
+                                                            <input type="text" class="small time" data-theme="my-style" data-lang="en" data-large-mode="true" data-modal="true" data-min-year="2018"
+                                                                data-large-default="true" data-format="d-m-Y" data-init-set="false"
+                                                                id="end_date">
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                                <!-- Date Limit End-->
+
+                                                <!-- Time Limit -->
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        <div class="form-group">
+                                                            <label for="start_time"> Start Time </label>
+                                                            <input type="text" class="small time-picker" id="start_time">
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <div class="form-group">
+                                                            <label for="end_time"> End Time </label>
+                                                            <input type="text" class="small time-picker" id="end_time">
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                                <!-- Time Limit End-->
+
+                                                <!-- Select Categories -->
+                                                <div>
+                                                    <div class="form-group">
+                                                        <label for="categories"> Select Category </label>
+                                                        <select class="small" name="" id="categories">
+                                                            <option value="1">Edm</option>
+                                                            <option value="2">Sports</option>
+                                                            <option value="3">Edm</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <!-- Select Categories End-->
+
+                                                <!-- Radio Start -->
+                                                <div class="radio-container margin-bottom-1">
+                                                    <div class="cntr">
+                                                        
+                                                        <label for="rdo-1" class="btn-radio">
+                                                            <input type="radio" value="1" id="rdo-1" name="radio-grp" checked="checked">
+                                                            <svg width="20px" height="20px" viewBox="0 0 20 20">
+                                                                <circle cx="10" cy="10" r="9"></circle>
+                                                                <path d="M10,7 C8.34314575,7 7,8.34314575 7,10 C7,11.6568542 8.34314575,13 10,13 C11.6568542,13 13,11.6568542 13,10 C13,8.34314575 11.6568542,7 10,7 Z"
+                                                                    class="inner"></path>
+                                                                <path d="M10,1 L10,1 L10,1 C14.9705627,1 19,5.02943725 19,10 L19,10 L19,10 C19,14.9705627 14.9705627,19 10,19 L10,19 L10,19 C5.02943725,19 1,14.9705627 1,10 L1,10 L1,10 C1,5.02943725 5.02943725,1 10,1 L10,1 Z"
+                                                                    class="outer"></path>
+                                                            </svg>
+                                                            <span>Yangon</span>
+                                                        </label>
+
+                                                        <label for="rdo-2" class="btn-radio">
+                                                            <input type="radio" value="2" id="rdo-2" name="radio-grp">
+                                                            <svg width="20px" height="20px" viewBox="0 0 20 20">
+                                                                <circle cx="10" cy="10" r="9"></circle>
+                                                                <path d="M10,7 C8.34314575,7 7,8.34314575 7,10 C7,11.6568542 8.34314575,13 10,13 C11.6568542,13 13,11.6568542 13,10 C13,8.34314575 11.6568542,7 10,7 Z"
+                                                                    class="inner"></path>
+                                                                <path d="M10,1 L10,1 L10,1 C14.9705627,1 19,5.02943725 19,10 L19,10 L19,10 C19,14.9705627 14.9705627,19 10,19 L10,19 L10,19 C5.02943725,19 1,14.9705627 1,10 L1,10 L1,10 C1,5.02943725 5.02943725,1 10,1 L10,1 Z"
+                                                                    class="outer"></path>
+                                                            </svg>
+                                                            <span>Mandalay</span>
+                                                        </label>
+                                                        <label for="rdo-3" class="btn-radio">
+                                                            <input type="radio" value="3"  id="rdo-3" name="radio-grp">
+                                                            <svg width="20px" height="20px" viewBox="0 0 20 20">
+                                                                <circle cx="10" cy="10" r="9"></circle>
+                                                                <path d="M10,7 C8.34314575,7 7,8.34314575 7,10 C7,11.6568542 8.34314575,13 10,13 C11.6568542,13 13,11.6568542 13,10 C13,8.34314575 11.6568542,7 10,7 Z"
+                                                                    class="inner"></path>
+                                                                <path d="M10,1 L10,1 L10,1 C14.9705627,1 19,5.02943725 19,10 L19,10 L19,10 C19,14.9705627 14.9705627,19 10,19 L10,19 L10,19 C5.02943725,19 1,14.9705627 1,10 L1,10 L1,10 C1,5.02943725 5.02943725,1 10,1 L10,1 Z"
+                                                                    class="outer"></path>
+                                                            </svg>
+                                                            <span>Taung Gyi</span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <!-- Radio End -->
+
+                                                <!-- Photo Uplaod -->
+                                                <div class="margin-bottom-1">
+                                                    <br>
+                                                    <div class="form-group">
+                                                        <label for="Uploaded Photo" class="pwal-daw-btn small bg-primary text-white upload-img"> Upload Image </label>
+                                                        <input id="Uploaded Photo" type="file" class="hide_display" name="" >
+                                                    </div>
+                                                </div>
+                                                <!-- Photo Uplaod -->
+
+                                                <!-- Ask Free -->
+                                                <div class="margin-bottom-1">
+                                                        <label class="cl-switch cl-switch-black">
+                                                                <span class="label"> Free Post </span>
+                                                                <input type="checkbox" id="free_post" checked="checked">
+                                                                <span class="switcher"></span>
+                                                        </label>
+
+                                                        <input type="hidden" name="free_post" id="free_post_hidden" value="true">
+                                                </div>
+                                                <!-- Ask Free End-->
+
+                                                <!-- Price -->
+                                                <div class="margin-bottom-1 hide_display" id="price_container">
+                                                    <div class="row">
+                                                            
+                                                            <div class="col-sm-6 padding-1">
+                                                               
+                                                                <div class="white-card-border">
+                                                                    <h4 class="margin-0"> Normal </h4>
+
+                                                                    <div class="form-group">
+                                                                        <label for="nomral_limit"> Ticket Limit </label>
+                                                                        <input type="number" min="50" max="250" class="small" id="nomral_limit">
+                                                                    </div>
+
+                                                                    <div class="form-group">
+                                                                        <label for="nomral_price"> Price </label>
+                                                                        <input type="number" min="1000" max="100" class="small" id="nomral_price">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-sm-6 padding-1">
+                                                                <div class="white-card-border">
+                                                                    <h4 class="margin-0"> Vip </h4>
+                                                                    <div class="form-group">
+                                                                        <label for="vip_limit"> Ticket Limit </label>
+                                                                        <input type="number" min="0" max="100" class="small" id="vip_limit">
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <label for="vip_price"> Price </label>
+                                                                        <input type="number" min="3000" class="small" id="vip_price">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                    </div>
+                                                </div>
+                                                <!-- Price End-->
+
+
+                                                <!-- Upload -->
+                                                <div>
+                                                    <button class="creator-add-post-button width-100 block cursor-pointer">
+                                                        Upload Post
+                                                    </button>
+                                                </div>
+                                                <!-- Upload End-->
+
+                                            </form>
+                                            <!-- Form Container End-->
+
+                                        </div>
+
+                                    </div>
+                                    <!-- Upload FOrm End-->
+
+                                </div>
+                            </div>
+                            <!-- Left Cards ANd Events Tickets Show End-->
+
+                            <!-- Right Profile Picture & Role -->
+                            <div class="col-lg-4 lg-hide user-right-role">
+                                <div class="white-card-border margin-bottom-1">
+                                    <div class="user_right_side_container">
+
+                                        <a href="/creator/profile.html">
+                                            <img src="/images/team/lmp.jpg" class="right_side_profile_picture" alt="">
+                                        </a>
+
+                                        <a href="/creator/profile.html"> Lwin Moe Paing </a>
+                                        <p> Creator </p>
+
+                                    </div>
+                                </div>
+
+                                <div class="white-card-border margin-bottom-1">
+                                    <div class="right-side-logo-container">
+                                        <h4> Welcome to Pwal Daw </h4>
+                                        <img class="logo" src="/images/multi_svg/pwal_daw_logo.png" alt="">
+                                    </div>
+                                </div>
+
+                                <div class="white-card-border">
+                                    <div class="right-side-logo-container">
+                                        <h5> Assigment Project for AceInspiration </h5>
+                                        <a target="_blank" href="https://www.facebook.com/aceinspiration">
+                                            <img class="logo" src="/images/multi_svg/ace_inspiration.png" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- Right Profile Picture & Role -->
+
+                        </div>
+                        <!--User Page First Row End -->
+
+                    </div>
+                    <!-- Content HEre End -->
+
+                </div>
+            </section>
+            <!-- Content Section -->
+
+        </div>
+        <!-- Multi-Contianer Pwal Daw End -->
+
+
+    </main>
+    <!-- Main Content End-->
+
+    <!-- Modal For Setting -->
+    <div class="hide_display" id="model_box_setting_container">
+        <!-- Modal Container -->
+        <div class="model-box-opo" data-bg="" id="modal_box_opo">
+        </div>
+        <!-- Modal Container End-->
+        <div class="model-box-setting">
+            <ul>
+                <li>
+                    <a href="/creator/profile.html"> Profile Setting </a>
+                </li>
+                <li>
+                    <a href="/"> Logout </a>
+                </li>
+                <li>
+                    <a href="#!" id="cancel_modal_setting_box"> Cancel </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- Modal For Setting End-->
+
+
+    <!-- Loader -->
+    <div class="cover_loader_div" id="cover_loader_div">
+
+        <div class="swapping-squares-spinner">
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+        </div>
+
+        <h3> Pwal Daw </h3>
+
+    </div>
+    <!-- Loader End -->
+
+
+</body>
+
+</html>

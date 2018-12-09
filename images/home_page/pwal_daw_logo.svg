@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 300 200" style="enable-background:new 0 0 300 200;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#429CD6;stroke-width:3;stroke-linecap:round;stroke-miterlimit:10;}
+	.st1{fill:none;stroke:#429CD6;stroke-width:3;stroke-miterlimit:10;}
+	.st2{fill:none;stroke:#429CD6;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st3{fill:none;stroke:#429CD6;stroke-width:3;stroke-miterlimit:10;stroke-dasharray:6.1765,2.0588;}
+	.st4{fill:none;stroke:#429CD6;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st5{fill:none;stroke:#429CD6;stroke-width:5;stroke-miterlimit:10;}
+	.st6{fill:none;stroke:#429CD6;stroke-width:3;stroke-miterlimit:10;stroke-dasharray:6.1766,2.0589;}
+	.st7{fill:none;stroke:#429BD5;stroke-width:6;stroke-miterlimit:10;}
+
+	#p_word {
+		transition: all 0.8s ease-in-out;
+		stroke-dashoffset : 228.93299865722656;
+		stroke-dasharray : 228.93299865722656;
+	}
+
+	#w_1_word {
+		transition: all 0.9s linear;
+		stroke-dashoffset : 72.81051635742188;
+		stroke-dasharray : 72.81051635742188;	
+	}
+
+	#a_1_word {
+		transition: all 0.9s linear;
+		stroke-dashoffset : 55.991207122802734;
+		stroke-dasharray : 55.991207122802734;	
+	}
+
+	#l_word {
+		transition: all 0.9s linear;
+		stroke-dashoffset : 55.991207122802734;
+		stroke-dasharray : 55.991207122802734;	
+	}
+
+	#d_word {
+		transition: all 1s Linear;
+		stroke-dashoffset : 181.28488159179688;
+		stroke-dasharray : 181.28488159179688;
+	}
+
+	#a_2_word {
+	
+		transition: all 1.2s linear;
+		stroke-dashoffset : 72.81058502197266;
+		stroke-dasharray : 72.81058502197266;	
+	}
+
+	#w_2_word {
+		transition: all 0.9s linear;
+		stroke-dashoffset : 72.81051635742188;
+		stroke-dasharray : 72.81051635742188;	
+	}
+
+	#cardGroup {
+		transition: all 0.9s linear;
+		stroke-dashoffset : 290.3243408203125;
+		stroke-dasharray : 290.3243408203125;	
+	}
+	
+</style>
+<g id="Pwal_x5F_Daw_x5F_Group">
+	<!-- <g id="Background_x5F_Bar_x5F_Group">
+		<path class="st7" d="M275.1,34.9l0-6.4H24.3l0,6.4c0,9.6-6,19.1-14.3,19.2v97.5c8.1,0.1,15,9.1,14.3,19.9h250.8
+			c0.4-10.7,6-22.2,14.9-21.4v-96C282,53.6,276.3,44.3,275.1,34.9z"/>
+	</g> -->
+	<g id="D_x5F_Group">
+		<path class="st4" d="M182.6,79.2c0,0-12.3,13.2-11.7,37.5c0.7,24.3,11.7,40.7,11.7,40.7c18.1-13.9,27.8-27.9,27.7-40.2
+			C210.2,106.4,179.4,78,182.6,79.2z" id="d_word"/>
+	</g>
+	<g id="AW_x5F_Group">
+		<path class="st2" id="a_2_word" d="M207.9,159.2c0,0-0.1-19.9,2.8-20s10.9,10.3-1.4,8c7.9,0,7.9,0,7.9,0s2.4,10,0.8,10.8"/>
+		<path class="st0" id="w_2_word" d="M222.4,139.2c0,0,0.5,20.8,5.5,20s4-10.8,4-12.8s2.8,12,6.8,12.8s3-18.5,3.5-20"/>
+	</g>
+	<g id="Word_x5F_P_x5F_Only">
+		<path id="p_word" class="st4" d="M70.2,104c0,0,27.4-5.7,29.5-30c2.2-24.3-22.5-33-29.5-35s-9.3-3.3-9.3-3.3l16,123"/>
+	</g>
+	<g id="Card_x5F_Group">
+		<path class="st5" id="cardGroup" d="M114.2,78.7c0,0-9,29-25.5,29c0,20.5,0,20.5,0,20.5s25,14,25.5,30.5c25.5,0,52,0,52,0s-9.5-24.5-9.5-42.5
+			c0-18,9.5-37.5,9.5-37.5H114.2z"/>
+		<g>
+			<g>
+				<path class="st1" d="M116.9,86.9c1,0,2,0,3,0"/>
+				<path class="st3" d="M122,86.9c22.4,0,28.4,0,31.9,0"/>
+				<path class="st1" d="M154.9,86.9c1,0,1.8,0,3,0"/>
+			</g>
+		</g>
+		<g>
+			<g>
+				<path class="st1" d="M116.9,153.2c1,0,2,0,3,0"/>
+				<path class="st6" d="M122,153.2c22.4,0,28.4,0,31.9,0"/>
+				<path class="st1" d="M154.9,153.2c1,0,1.8,0,3,0"/>
+			</g>
+		</g>
+	</g>
+	<g id="WAL_x5F_Group">
+		<path class="st0" id="w_1_word" d="M102.2,109.2c0,0,0.5,20.8,5.5,20s4-10.8,4-12.8s2.8,12,6.8,12.8s3-18.5,3.5-20"/>
+		<path class="st2" id="a_1_word" d="M125.1,129.2c0,0-0.1-19.9,2.8-20s10.9,10.3-1.4,8c7.9,0,7.9,0,7.9,0s2.4,10,0.8,10.8"/>
+		<path class="st2" id="l_word" d="M138.3,108c0,0,7,20.7,3.5,21.2s5.5-2.7,8.2-1.7"/>
+	</g>
+</g>
+	<script>
+		(function(){
+			var timing = {};
+			var logo = {};
+
+			timing.one = 700;
+			timing.two = 1100;
+			timing.three = 1600;
+			timing.four = 2000;
+			timing.five = 2500;
+			timing.six = 3000;
+			timing.seven = 3800;
+
+			// console.dir(getId("d_word").getTotalLength());
+
+
+			// P Word
+			setTimeout(function () {
+				logo.p_word = getId("p_word");
+
+				logo.p_word.style.strokeDashoffset = 0;
+
+			}, timing.one);
+
+			// w Word
+			setTimeout(function () {
+				logo.w_1_word = getId("w_1_word");
+				logo.w_1_word.style.strokeDashoffset = 0;
+
+			}, timing.two);
+
+			// a Word
+			setTimeout(function () {
+				logo.a_1_word = getId("a_1_word");
+				logo.a_1_word.style.strokeDashoffset = 0;
+
+			}, timing.three);
+
+			// L word 
+			setTimeout(function () {
+				logo.l_word = getId("l_word");
+
+				logo.l_word.style.strokeDashoffset = 0;
+
+			}, timing.four);
+
+
+			// D Word
+			setTimeout(function () {
+				logo.d_word = getId("d_word");
+
+				logo.d_word.style.strokeDashoffset = 0;
+
+			}, timing.five);
+
+			// A word
+			setTimeout(function () {
+				logo.a_2_word = getId("a_2_word");
+				logo.a_2_word.style.strokeDashoffset = 0;
+
+			}, timing.six);
+			// W Worod
+			setTimeout(function () {
+				logo.w_2_word = getId("w_2_word");
+				logo.w_2_word.style.strokeDashoffset = 0;
+
+			}, timing.seven);
+
+			// cardGroup
+			setTimeout(function () {
+				logo.cardGroup = getId("cardGroup");
+				logo.cardGroup.style.strokeDashoffset = 0;
+
+			}, timing.seven);
+
+			function getId(x) {
+				return document.getElementById(x);
+			}
+		})()
+	</script>
+
+</svg>
+
+

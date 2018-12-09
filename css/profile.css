@@ -1,0 +1,104 @@
+/* Left Image  */
+.profile-page-left-img-container label > img {
+    width: 200px;
+    height: 200px;
+    border-radius: 200px;
+    border: 1px solid #e0e0e0 ;
+}
+.profile-page-left-img-container label  {
+    cursor: pointer;
+}
+
+.profile-page-left-img-container label:before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 160px;
+    left: 181px;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 2rem;
+    border: 2px solid #fff;
+    box-shadow: 1px 1px 1px #fff, 0 0 5px 0px #1da1f2;
+    transform: translateY(-50%);
+    background-color: #fff;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(/images/multi_svg/profile_add_image.svg);
+
+}
+
+
+.profile-page-right-name-container > h2 {
+    font-size: 1.5rem;
+    color: #afafaf;
+}
+
+.profile-page-change-password-header-container > h2 {
+    color: #afafaf;
+    padding-left: 0.3rem;
+    margin: 0 0 1rem 0;
+}
+
+/* Modal For CHange Name */
+
+.model_box_profile_container {
+    position: fixed;
+    z-index: 6;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    width: 50vw;
+    height: 70vh;
+    background-color: #fff;
+    animation: scale-in 0.4s cubic-bezier(0.51, 0.38, 0.27, 1.55) 1 forwards;
+
+}
+
+@keyframes scale-in {
+    0% {
+        transform: translate(-50%, -50%) scale(0);
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+
+
+@media screen and (max-width: 767px)
+{
+    .profile-page-left-img-container label  > img {
+        width: 130px;
+        height: 130px;
+        border-radius: 130px;
+    }
+
+    .profile-page-right-name-container > h2 {
+        font-size: 1rem;
+    }
+
+    .profile-page-right-button-container > button {
+        font-size: 0.7rem;
+    }
+    .profile-page-change-password-header-container > h2 {
+        font-size: 1rem;
+        text-align:center;
+        padding: 0;
+    }
+
+
+    .model_box_profile_container {
+        width: 80vw;
+        height: 70vh;
+        background-color: #fff;
+    }
+
+    .profile-page-left-img-container label:before {
+        top: 100px;
+        width: 1.5rem;
+        left: 121px;
+        height: 1.5rem;
+    }
+}

@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title> Pwal Daw | Admin Home DashBoard </title>
+
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" sizes="16x16" />
+    <meta name="theme-color" content="#88d2ff">
+
+
+    <link rel="stylesheet" href="/css/bootstrap-grid.css">
+    <link rel="stylesheet" href="/css/multi_container.css">
+    <link rel="stylesheet" href="/css/loader.css">
+    <link rel="stylesheet" href="/css/helper.css">
+    <link rel="stylesheet" href="/css/team.css">
+    <link rel="stylesheet" href="/css/user.css">
+    <link rel="stylesheet" href="/css/creator.css">
+    <link rel="stylesheet" href="/css/profile.css">
+    <link rel="stylesheet" href="/css/user.css">
+    <link rel="stylesheet" href="/css/admin.css">
+    <link rel="stylesheet" href="/css/noti.css">
+
+    <script src="/js/jquery-3.3.1.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+            setTimeout(function () {
+                $('#cover_loader_div').fadeOut('slow');
+                $("#main").removeClass('hide_display');
+            }, 500);
+
+            // Modal_Box Setting
+
+            $('#modal_box_opo').click(function () {
+                $('#model_box_setting_container').addClass('hide_display');
+            });
+
+            $('#cancel_modal_setting_box').click(function () {
+                $('#model_box_setting_container').addClass('hide_display');
+            });
+
+            $('#mobile_setting').click(function () {
+                $('#model_box_setting_container').removeClass('hide_display');
+            });
+
+            // Modal_Box Setting End
+
+            // Creator Modal
+            $('#creator_add_opo').click(function () {
+                $('#creator_add_modal').addClass('hide_display');
+            });
+
+            $('#model_box_creator_add_cancel').click(function(){
+                $('#creator_add_modal').addClass('hide_display');
+            });
+
+            $('#creator_add_click').click(function () {
+                $('#creator_add_modal').removeClass('hide_display');
+            });
+
+        });
+    </script>
+
+</head>
+
+<body>
+
+    <!-- Main Content -->
+    <main class="hide_display" id="main">
+
+        <!-- Multi-Contianer Pwal Daw Start -->
+        <div class="multi-container-pwaldaw">
+
+            <!-- Fixed Top Nav Container -->
+            <div class="multi-container-fixed-top-nav">
+
+                <!-- Left Side Container Fluid -->
+                <div class="container-fluid">
+
+                    <div class="row md-hide">
+
+                        <div class="col-md-9 padding-0">
+                            <!-- Link List And Icon -->
+                            <nav class="nav">
+                                <ul class="external_link">
+                                    <li>
+                                        <a class="home" href="/admin">Home</a>
+                                    </li>
+                                    <li>
+                                        <a class="events" href="/admin/events_list.html">Event</a>
+                                    </li>
+                                    <li>
+                                        <a class="creator" href="/admin/creators_list.html">Creator</a>
+                                    </li>
+                                    <li>
+                                        <a class="normal" href="/admin/normal_list.html">Normal</a>
+                                    </li>
+                                    <li>
+                                        <a class="transaction" href="/admin/transaction.html">Tras</a>
+                                    </li>
+
+                                </ul>
+                            </nav>
+                            <!-- Link List And Icon End-->
+                        </div>
+
+                        <div class="col-md-3 padding-0">
+                            <nav class="nav">
+                                <ul class="external_link padding-0 ">
+
+                                    <li class="">
+                                        <a class="profile_list" href="/admin/profile.html">
+                                            <img src="/images/team/lmp.jpg" alt="">
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a class="logout" href="/">
+                                            Logout
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </nav>
+                        </div>
+
+                    </div>
+
+                </div>
+                <!-- Left Side Container Fluid End-->
+
+
+                <!-- Mobile Veiw Logo -->
+                <header class="nav-mobile-header">
+                    <div>
+                        <a href="/">
+                            <img class="nav-mobile-header-img" src="/images/multi_svg/pwal_daw_white_logo.png" alt="">
+                        </a>
+                    </div>
+                </header>
+                <!-- Mobile Veiw Logo End-->
+
+            </div>
+            <!-- Fixed Top Nav Container End-->
+
+            <!-- Fixed Mobile View Bottom Nav For User -->
+            <div class="multi-container-fixed-bottom-nav">
+                <!-- Link List And Icon -->
+                <div class="container-fluid padding-0">
+                    <div class="row">
+                        <div class="col-2 fixed-bottom-nav padding-0">
+                            <a class="home" href="/admin/"> </a>
+                        </div>
+                        <div class="col-2 fixed-bottom-nav padding-0">
+                            <a class="events" href="/admin/events_list.html"> </a>
+                        </div>
+                        <div class="col-2 fixed-bottom-nav padding-0">
+                            <a class="creator" href="/admin/creators_list.html"> </a>
+                        </div>
+                        <div class="col-2 fixed-bottom-nav padding-0">
+                            <a class="normal" href="/admin/normal_list.html"> </a>
+                        </div>
+                        <div class="col-2 fixed-bottom-nav padding-0">
+                            <a class="transaction" href="/admin/transaction.html"> </a>
+                        </div>
+                        <div class="col-2 fixed-bottom-nav padding-0">
+                            <a class="setting" href="#!" id="mobile_setting"> </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Link List And Icon End-->
+            </div>
+            <!-- Fixed Mobile View Bottom Nav For User End-->
+
+            <!-- Content Section -->
+            <section>
+                <div class="multi-content-container padding-xs-0">
+
+                    <!-- Creator Add Modal Box  -->
+                    <div class="hide_display" id="creator_add_modal">
+                        <!-- Div Opa -->
+                        <div class="model-box-opo" id="creator_add_opo">
+                        </div>
+                        <!-- Div Opa End -->
+                        <div class="model_box_profile_container padding-1">
+                            <form class="pwal-daw-form" action="post">
+                                <div>
+                                    <h3 class="text-center"> Added Creator </h3>
+                                </div>
+
+                                <div class="form-group margin-bottom-1">
+                                    <input class="input-retype-data" type="text" placeholder="Enter Name" required="required">
+                                </div>
+
+                                <div class="form-group margin-bottom-1">
+                                    <input class="input-retype-data" type="text" placeholder="Example 094200000" required="required">
+                                </div>
+
+                                <div class="form-group margin-bottom-1">
+                                    <input class="input-retype-data" type="email" placeholder="example@email.com"  required="required">
+                                </div>
+
+                                <div class="form-group margin-bottom-1">
+                                    <input class="input-retype-data" type="password" placeholder="Enter Password" required="required">
+                                </div>
+
+                                <div>
+                                    <button type="submit" class="pwal-daw-btn light"> Add </button>
+                                    <button type="button" id="model_box_creator_add_cancel" class="pwal-daw-btn btn-danger text-white "> Cancel </button>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                    <!-- Creator Add Modal Box  -->
+
+                    <!-- Click Add Creator -->
+                    <div class="">
+                        <div class="creator-add-container">
+                            <a href="#!" id="creator_add_click">  </a>
+                        </div>
+                    </div>
+                    <!-- Click Add Creator End -->
+
+                    <!-- Content HEre -->
+                    <div class="container-fluid margin-top-1">
+
+                           
+                            
+                        <!--User Page First Row -->
+                        <div class="row">
+
+                            
+
+                                <!-- Left Cards ANd Events Tickets Show -->
+                                <div class="col-lg-12  padding-0 margin-bottom-1">
+                                    <div class="">
+
+                                        <div class="white-card-border margin-bottom-1">
+                                            <h3 class="margin-0"> Events List </h3>
+                                        </div>
+
+                                        <!-- All List Container -->
+                                        <div class="lists-container">
+
+                                            <!-- Start Each -->
+
+                                            <div class="each-list margin-bottom-1 padding-0">
+                                                    <div class="container-fluid">
+                                                        <div class="row">
+                                                            <div class="col-4 white-card-border padding-0">
+                                                                <div class="bg-img" style="background-image: url('/images/concepts/charlie_puth.jpg')">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-6 white-card-border padding-0">
+                                                                <h5 class="margin-0 padding-top-1 padding-left-1 padding-right-1"> Charlie Puth Concepts [ Lwin Moe Paing ] </h4>
+                                                                <div class="margin-top-1 padding-left-1">
+                                                                    <a href="#!" class="pwal-daw-btn small btn-danger text-white"> Delete </a>
+                                                                    <a href="tel:097995452" class="pwal-daw-btn small"> Call </a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-2 white-card-border padding-0">
+                                                                <div class="pending-status-container">
+                                                                    <img src="/images/multi_svg/check_right.svg" title="pending" alt="pending" class="pending_status">
+                                                                    <p class="text-overflow text-success"> Running </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                            </div>
+
+
+                                            <div class="each-list margin-bottom-1 padding-0">
+                                                    <div class="container-fluid">
+                                                        <div class="row">
+                                                            <div class="col-4 white-card-border padding-0">
+                                                                <div class="bg-img" style="background-image: url('/images/concepts/taylor.jpg')">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-6 white-card-border padding-0">
+                                                                <h5 class="margin-0 padding-top-1 padding-left-1 padding-right-1"> Charlie Puth Concepts [ Min Arkar Soe ] </h5>
+                                                                <div class="margin-top-1 padding-left-1">
+                                                                    <a href="#!" class="pwal-daw-btn small btn-danger text-white"> Delete </a>
+                                                                    <a href="tel:097995452" class="pwal-daw-btn small"> Call </a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-2 white-card-border padding-0">
+                                                                <div class="pending-status-container">
+                                                                    <img src="/images/multi_svg/denied_status.svg" title="pending" alt="pending" class="pending_status">
+                                                                    <p class="text-overflow text-danger"> Expired </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                            </div>
+                                            <!-- End Each -->
+
+
+                                        </div>
+                                        <!-- All List Container End -->
+
+                                    </div>
+                                </div>
+                                <!-- Left Cards ANd Events Tickets Show End-->
+
+                        </div>
+                        <!--User Page First Row End -->
+
+                    </div>
+                    <!-- Content HEre End -->
+
+                </div>
+            </section>
+            <!-- Content Section -->
+
+        </div>
+        <!-- Multi-Contianer Pwal Daw End -->
+
+
+    </main>
+    <!-- Main Content End-->
+
+    <!-- Modal For Setting -->
+    <div class="hide_display" id="model_box_setting_container">
+        <!-- Modal Container -->
+        <div class="model-box-opo" data-bg="" id="modal_box_opo">
+        </div>
+        <!-- Modal Container End-->
+        <div class="model-box-setting">
+            <ul>
+                <li>
+                    <a href="/admin/profile.html"> Profile Setting </a>
+                </li>
+                <li>
+                    <a href="/"> Logout </a>
+                </li>
+                <li>
+                    <a href="#!" id="cancel_modal_setting_box"> Cancel </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- Modal For Setting End-->
+
+
+    <!-- Loader -->
+    <div class="cover_loader_div" id="cover_loader_div">
+
+        <div class="swapping-squares-spinner">
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+        </div>
+
+        <h3> Pwal Daw </h3>
+
+    </div>
+    <!-- Loader End -->
+
+
+</body>
+
+</html>

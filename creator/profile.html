@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title> Pwal Daw | Creator Home DashBoard </title>
+
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" sizes="16x16" />
+    <meta name="theme-color" content="#88d2ff">
+
+
+    <link rel="stylesheet" href="/css/bootstrap-grid.css">
+    <link rel="stylesheet" href="/css/multi_container.css">
+    <link rel="stylesheet" href="/css/loader.css">
+    <link rel="stylesheet" href="/css/helper.css">
+    <link rel="stylesheet" href="/css/team.css">
+    <link rel="stylesheet" href="/css/user.css">
+    <link rel="stylesheet" href="/css/creator.css">
+    <link rel="stylesheet" href="/css/profile.css">
+
+    <script src="/js/jquery-3.3.1.min.js"></script>
+
+    <script>
+
+        $(document).ready( function () {
+
+            setTimeout(function () {
+                $('#cover_loader_div').fadeOut('slow');
+                $("#main").removeClass('hide_display');
+            }, 500);
+
+            // Modal_Box Setting
+            
+            $('#modal_box_opo').click( function () {
+                $('#model_box_setting_container').addClass('hide_display');
+            });
+
+            $('#cancel_modal_setting_box').click( function () {
+                $('#model_box_setting_container').addClass('hide_display');
+            });
+
+            $('#mobile_setting').click(function () {
+                $('#model_box_setting_container').removeClass('hide_display');
+            });
+
+            // Modal_Box Setting End
+
+        });
+    
+    </script>
+
+    <!-- Script For Profile -->
+    <script>
+     $(document).ready( function () {
+            // Profile Image CLick
+            $('#profile_image_upload').change( function () {
+                alert('change');
+            });
+
+
+            // Modal Box Open
+            $('#profile_edit_btn').click( function () {
+                $('#model_box_profile_changing_container').removeClass('hide_display');
+
+                $.each($('.input-retype-data'), function (k, v) {
+                    $(v).val(v.attributes[3].textContent);
+                });
+
+            });
+            
+            // Modal Box Cancel
+            $('#model_box_profile_cancel').click( function () {
+                $('#model_box_profile_changing_container').addClass('hide_display');
+            });
+            
+            $('#model_box_profile_opo').click(function () {
+                $('#model_box_profile_changing_container').addClass('hide_display');
+            });
+
+     });
+    </script>
+    <!-- Script For Profile End-->
+
+    <!-- Script For Noti -->
+    <script>
+        $(document).ready( function () {
+           
+            var c = 1;
+            var x = setInterval( function () {
+
+                if ( c > 4 ) {
+                    clearInterval(x);
+                    document.getElementById('top_noti').innerHTML = ' ';
+                document.getElementById('bottom_noti').innerHTML = ' ';
+                    return false;
+                }
+                document.getElementById('top_noti').innerHTML = '<span class="noti-span"> '+ c +' </span>';
+                document.getElementById('bottom_noti').innerHTML = '<span class="noti-span"> '+ c +' </span>';
+                console.log(c);
+                c++;
+
+            },4000)
+
+        });
+    </script>
+    <!-- Script For Noti -->
+
+</head>
+<body>
+
+    <!-- Main Content -->
+    <main class="hide_display" id="main">
+
+        <!-- Multi-Contianer Pwal Daw Start -->
+        <div class="multi-container-pwaldaw">
+
+            <!-- Fixed Top Nav Container -->
+            <div class="multi-container-fixed-top-nav"> 
+
+                <!-- Left Side Container Fluid -->
+                <div class="container-fluid">
+
+                    <div class="row md-hide">
+
+                        <div class="col-md-9 padding-0">
+                            <!-- Link List And Icon -->
+                            <nav class="nav">
+                                    <ul class="external_link">
+                                        <li>
+                                            <a class="home" href="/creator"> Home </a>
+                                        </li>
+                                        <li>
+                                            <a class="creator_card" href="/creator/card_list.html"> Card </a>
+                                        </li>
+                                        <li>
+                                            <a class="noti" href="/creator/noti.html">
+                                                 Noti 
+                                                 <span id="top_noti">
+                                                     <span class="noti-span"> 1 </span>
+                                                 </span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="add" href="/creator/add_post.html"> Add </a>
+                                        </li>
+        
+                                    </ul>
+                            </nav>
+                            <!-- Link List And Icon End-->
+                        </div>
+                        
+                        <div class="col-md-3 padding-0">
+                            <nav class="nav">
+                                <ul class="external_link padding-0 ">
+
+                                    <li class="">
+                                        <a class="profile_list" href="/creator/profile.html">
+                                                    <img src="/images/team/lmp.jpg" alt="">
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a class="logout" href="/">
+                                            Logout
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </nav>
+                        </div>
+                    
+                    </div>
+                   
+                </div>
+                <!-- Left Side Container Fluid End-->
+                
+
+                <!-- Mobile Veiw Logo -->
+                <header class="nav-mobile-header">
+                    <div>
+                        <a href="/">
+                            <img class="nav-mobile-header-img" src="/images/multi_svg/pwal_daw_white_logo.png" alt="">
+                        </a>
+                    </div>
+                </header>
+                <!-- Mobile Veiw Logo End-->
+
+            </div>
+            <!-- Fixed Top Nav Container End-->
+
+            <!-- Fixed Mobile View Bottom Nav For User -->
+            <div class="multi-container-fixed-bottom-nav">
+                 <!-- Link List And Icon -->
+                    <div class="container-fluid padding-0">
+                        <div class="row">
+                            <div class="col-3 fixed-bottom-nav padding-0">
+                                <a class="home" href="/creator/">  </a>
+                            </div>
+                            <div class="col-2 fixed-bottom-nav padding-0">
+                                <a class="creator_card" href="/creator/card_list.html">  </a>
+                            </div>
+                            <div class="col-2 fixed-bottom-nav padding-0">
+                                    <a class="noti" href="/creator/noti.html" > 
+                                        <span id="bottom_noti">
+                                            <span class="noti-span"> 1</span>
+                                        </span>
+                                    </a>
+                            </div>
+                            <div class="col-2 fixed-bottom-nav padding-0">
+                                    <a class="add" href="/creator/add_post.html" >  </a>
+                            </div>
+                            <div class="col-2 fixed-bottom-nav padding-0">
+                                    <a class="setting" href="#!" id="mobile_setting">  </a>
+                            </div>
+                        </div>
+                    </div>
+                 <!-- Link List And Icon End-->
+            </div>
+            <!-- Fixed Mobile View Bottom Nav For User End-->
+            
+            <!-- Content Section -->
+            <section>
+                <div class="multi-content-container padding-xs-0">
+
+                    <!-- Content HEre -->
+                    <div>
+
+                        <!-- Modal For Profile Change Name -->
+                        <div class="hide_display" id="model_box_profile_changing_container">
+                            <!-- Div Opa -->
+                            <div class="model-box-opo" id="model_box_profile_opo">
+                            </div>
+                            <!-- Div Opa End -->
+                            <div class="model_box_profile_container padding-1">
+                                <form class="pwal-daw-form" action="post">
+                                    <div>
+                                        <h3 class="text-center"> Change Profile </h3>
+                                    </div>
+
+                                    <div class="form-group margin-bottom-1">
+                                        <input class="input-retype-data" type="text" placeholder="Enter Name" value="Lwin Moe Paing" required>
+                                    </div>
+
+                                    <div class="form-group margin-bottom-1">
+                                        <input class="input-retype-data" type="text" placeholder="Example 094200000" value="09420059241" required>
+                                    </div>
+
+                                    <div>
+                                        <button type="submit" class="pwal-daw-btn light"> Change </button>
+                                        <button type="button" id="model_box_profile_cancel" class="pwal-daw-btn btn-danger text-white "> Cancel </button>
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>
+                        <!-- Modal For Profile Change Name End -->
+
+
+                        <!-- Section Start -->
+                        <div class="container-fluid margin-top-1 padding-xs-0">
+
+                            <!-- Name N Profile Picture -->
+                            <div class="white-card-border">
+                                <div class="row">
+
+                                    <!-- Left Image -->
+                                    <div class="col-6">
+                                        <div class="profile-page-left-img-container">
+
+                                            <label for="profile_image_upload">
+                                                <img src="/images/profiles/pwal_daw_default_user.png" alt="">
+                                            </label>
+                                            <!-- Image Upload FOrm -->
+                                            <form action="" method="post">
+                                                <input type="file" id="profile_image_upload" class="hide_display">
+                                            </form>
+                                            <!-- Image Upload FOrm End-->
+
+                                        </div>
+                                    </div>
+                                    <!-- Left Image End -->
+
+
+                                    <!-- Right Name Edit Button -->
+                                    <div class="col-6">
+                                        <div class="profile-page-right-name-container">
+                                            <h2> Lwin Moe Paing</h2>
+                                        </div>
+                                        <div class="profile-page-right-button-container">
+                                            <button type="button" class="pwal-daw-btn light" id="profile_edit_btn"> Edit Profile </button>
+                                        </div>
+                                    </div>
+                                    <!-- Right Name Edit Button End-->
+                                </div>
+                            </div>
+                            <!-- Name N Profile Picture End -->
+
+                            <!-- Change Password Container -->
+                            <div class="white-card-border margin-top-1">
+                                <div class="profile-page-change-password-header-container">
+                                    <h2>Change Your Password</h2>
+                                </div>
+
+                                <!-- Form Container -->
+                                <div>
+                                    <form class="pwal-daw-form" action="post">
+                                        <div class="form-group margin-bottom-1">
+                                            <input type="password" placeholder="Current" required>
+                                        </div>
+
+                                        <div class="form-group margin-bottom-1">
+                                            <input type="password" placeholder="New Password" required>
+                                        </div>
+
+                                        <div class="form-group margin-bottom-1">
+                                            <input type="password" placeholder="ReEnter Password" required>
+                                        </div>
+
+                                        <div>
+                                            <button type="submit" class="pwal-daw-btn light"> Change </button>
+                                        </div>
+
+                                    </form>
+                                </div>
+                                <!-- Form Container End-->
+                            </div>
+                            <!-- Change Password Container End-->
+
+                        </div>
+                        <!-- Section End -->
+                    </div>
+                    <!-- Content HEre End -->
+
+                </div>
+            </section>
+            <!-- Content Section -->
+
+        </div>
+        <!-- Multi-Contianer Pwal Daw End -->
+
+
+    </main>
+    <!-- Main Content End-->
+
+    <!-- Modal For Setting -->
+    <div class="hide_display" id="model_box_setting_container">
+        <!-- Modal Container -->
+        <div class="model-box-opo" data-bg="" id="modal_box_opo">
+        </div>
+        <!-- Modal Container End-->
+        <div class="model-box-setting">
+                <ul>
+                    <li>
+                        <a href="/creator/profile.html"> Profile Setting </a>
+                    </li>
+                    <li>
+                        <a href="/"> Logout </a>
+                    </li>
+                    <li>
+                        <a href="#!" id="cancel_modal_setting_box"> Cancel  </a>
+                    </li>
+                </ul>
+        </div>
+    </div>
+    <!-- Modal For Setting End-->
+    
+
+    <!-- Loader -->
+    <div class="cover_loader_div" id="cover_loader_div">
+          
+            <div class="swapping-squares-spinner">
+                    <div class="square"></div>
+                    <div class="square"></div>
+                    <div class="square"></div>
+                    <div class="square"></div>
+            </div>
+
+            <h3> Pwal Daw </h3>
+
+    </div>
+    <!-- Loader End -->
+
+    
+</body>
+</html>

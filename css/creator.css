@@ -1,0 +1,41 @@
+.creator-add-post-button {
+    border: 3px solid white;
+    padding: 0.6rem 0rem;
+    text-align: center;
+    background-color: #1b95e0;
+    border-radius: 2rem;
+    color: #fff;
+    display: block;
+    text-decoration: none;
+    box-shadow: 0px 0px 0px 3px #1b95e0;
+    position: relative;
+}
+
+.creator-add-post-button:after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: calc(50% + 2.3rem);
+    width: 1.25rem;
+    height: 1.25rem;
+    transform: translateY(-50%);
+    border-radius: 1.25rem;
+    background-color: #fff;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('/images/multi_svg/add.svg');
+}
+
+.creator-add-post-button:hover {
+    background-color: #0c7abf;
+}
+
+@media screen and (max-width: 767px)
+{
+    .creator-add-post-button {
+        width: 97%;
+        margin: 0 auto; 
+    }
+}

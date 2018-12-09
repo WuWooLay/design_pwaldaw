@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title> Pwal Daw | Creator Home DashBoard </title>
+
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" sizes="16x16" />
+    <meta name="theme-color" content="#88d2ff">
+
+
+    <link rel="stylesheet" href="/css/bootstrap-grid.css">
+    <link rel="stylesheet" href="/css/multi_container.css">
+    <link rel="stylesheet" href="/css/loader.css">
+    <link rel="stylesheet" href="/css/helper.css">
+    <link rel="stylesheet" href="/css/team.css">
+    <link rel="stylesheet" href="/css/user.css">
+    <link rel="stylesheet" href="/css/creator.css">
+
+    <script src="/js/jquery-3.3.1.min.js"></script>
+
+    <script>
+
+        $(document).ready( function () {
+
+            setTimeout(function () {
+                $('#cover_loader_div').fadeOut('slow');
+                $("#main").removeClass('hide_display');
+            }, 500);
+
+            // Modal_Box Setting
+            
+            $('#modal_box_opo').click( function () {
+                $('#model_box_setting_container').addClass('hide_display');
+            });
+
+            $('#cancel_modal_setting_box').click( function () {
+                $('#model_box_setting_container').addClass('hide_display');
+            });
+
+            $('#mobile_setting').click(function () {
+                $('#model_box_setting_container').removeClass('hide_display');
+            });
+
+            // Modal_Box Setting End
+
+        });
+    
+    </script>
+
+    <!-- Script For Noti -->
+    <script>
+        $(document).ready( function () {
+           
+            var c = 1;
+            var x = setInterval( function () {
+
+                if ( c > 4 ) {
+                    clearInterval(x);
+                    document.getElementById('top_noti').innerHTML = ' ';
+                document.getElementById('bottom_noti').innerHTML = ' ';
+                    return false;
+                }
+                document.getElementById('top_noti').innerHTML = '<span class="noti-span"> '+ c +' </span>';
+                document.getElementById('bottom_noti').innerHTML = '<span class="noti-span"> '+ c +' </span>';
+                console.log(c);
+                c++;
+
+            },4000)
+
+        });
+    </script>
+    <!-- Script For Noti -->
+
+</head>
+<body>
+
+    <!-- Main Content -->
+    <main class="hide_display" id="main">
+
+        <!-- Multi-Contianer Pwal Daw Start -->
+        <div class="multi-container-pwaldaw">
+
+            <!-- Fixed Top Nav Container -->
+            <div class="multi-container-fixed-top-nav"> 
+
+                <!-- Left Side Container Fluid -->
+                <div class="container-fluid">
+
+                    <div class="row md-hide">
+
+                        <div class="col-md-9 padding-0">
+                            <!-- Link List And Icon -->
+                            <nav class="nav">
+                                    <ul class="external_link">
+                                        <li>
+                                            <a class="home" href="/creator"> Home </a>
+                                        </li>
+                                        <li>
+                                            <a class="creator_card" href="/creator/card_list.html"> Card </a>
+                                        </li>
+                                        <li>
+                                            <a class="noti" href="/creator/noti.html">
+                                                 Noti 
+                                                 <span id="top_noti">
+                                                     <span class="noti-span"> 1 </span>
+                                                 </span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="add" href="/creator/add_post.html"> Add </a>
+                                        </li>
+        
+                                    </ul>
+                            </nav>
+                            <!-- Link List And Icon End-->
+                        </div>
+                        
+                        <div class="col-md-3 padding-0">
+                            <nav class="nav">
+                                <ul class="external_link padding-0 ">
+
+                                    <li class="">
+                                        <a class="profile_list" href="/creator/profile.html">
+                                                    <img src="/images/team/lmp.jpg" alt="">
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a class="logout" href="/">
+                                            Logout
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </nav>
+                        </div>
+                    
+                    </div>
+                   
+                </div>
+                <!-- Left Side Container Fluid End-->
+                
+
+                <!-- Mobile Veiw Logo -->
+                <header class="nav-mobile-header">
+                    <div>
+                        <a href="/">
+                            <img class="nav-mobile-header-img" src="/images/multi_svg/pwal_daw_white_logo.png" alt="">
+                        </a>
+                    </div>
+                </header>
+                <!-- Mobile Veiw Logo End-->
+
+            </div>
+            <!-- Fixed Top Nav Container End-->
+
+            <!-- Fixed Mobile View Bottom Nav For User -->
+            <div class="multi-container-fixed-bottom-nav">
+                 <!-- Link List And Icon -->
+                    <div class="container-fluid padding-0">
+                        <div class="row">
+                            <div class="col-3 fixed-bottom-nav padding-0">
+                                <a class="home" href="/creator/">  </a>
+                            </div>
+                            <div class="col-2 fixed-bottom-nav padding-0">
+                                <a class="creator_card" href="/creator/card_list.html">  </a>
+                            </div>
+                            <div class="col-2 fixed-bottom-nav padding-0">
+                                    <a class="noti" href="/creator/noti.html" > 
+                                        <span id="bottom_noti">
+                                            <span class="noti-span"> 1</span>
+                                        </span>
+                                    </a>
+                            </div>
+                            <div class="col-2 fixed-bottom-nav padding-0">
+                                    <a class="add" href="/creator/add_post.html" >  </a>
+                            </div>
+                            <div class="col-2 fixed-bottom-nav padding-0">
+                                    <a class="setting" href="#!" id="mobile_setting">  </a>
+                            </div>
+                        </div>
+                    </div>
+                 <!-- Link List And Icon End-->
+            </div>
+            <!-- Fixed Mobile View Bottom Nav For User End-->
+            
+            <!-- Content Section -->
+            <section>
+                <div class="multi-content-container padding-xs-0">
+
+                    <!-- Content HEre -->
+                        <div class="container-fluid margin-top-1">
+
+                           
+                            
+                            <!--User Page First Row -->
+                            <div class="row">
+
+                                
+
+                                    <!-- Left Cards ANd Events Tickets Show -->
+                                    <div class="col-lg-8  padding-0 margin-bottom-1">
+                                        <div class="">
+
+                                             <!-- Add Post -->
+                                              <div class="margin-bottom-1">
+                                                    
+                                                <a href="/creator/add_post.html" class="creator-add-post-button">
+                                                    Add Post 
+                                                </a>
+                                                
+                                              </div>
+                                            <!-- Add Post -->
+
+                                            <div class="white-card-border margin-bottom-1">
+                                                <h3 class="margin-0"> Created Lists </h3>
+                                            </div>
+
+                                            <!-- All List Container -->
+                                            <div class="lists-container">
+
+                                                <!-- Start Each -->
+
+                                                <div class="each-list margin-bottom-1 padding-0">
+                                                        <div class="container-fluid">
+                                                            <div class="row">
+                                                                <div class="col-4 white-card-border padding-0">
+                                                                    <div class="bg-img" style="background-image: url('/images/concepts/charlie_puth.jpg')">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-6 white-card-border padding-0">
+                                                                    <h5 class="margin-0 padding-top-1 padding-left-1 padding-right-1"> Charlie Puth Concepts </h4>
+                                                                    <div class="margin-top-1 padding-left-1">
+                                                                        <a href="/creator/edit_post.html" class="pwal-daw-btn small"> Edit </a>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-2 white-card-border padding-0">
+                                                                    <div class="pending-status-container">
+                                                                        <img src="/images/multi_svg/check_right.svg" title="pending" alt="pending" class="pending_status">
+                                                                        <p class="text-overflow text-success"> Running </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                </div>
+
+
+                                                <div class="each-list margin-bottom-1 padding-0">
+                                                        <div class="container-fluid">
+                                                            <div class="row">
+                                                                <div class="col-4 white-card-border padding-0">
+                                                                    <div class="bg-img" style="background-image: url('/images/concepts/taylor.jpg')">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-6 white-card-border padding-0">
+                                                                    <h5 class="margin-0 padding-top-1 padding-left-1 padding-right-1"> Charlie Puth Concepts </h5>
+                                                                    <div class="margin-top-1 padding-left-1">
+                                                                        <a href="/creator/edit_post.html" class="pwal-daw-btn small"> Edit </a>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-2 white-card-border padding-0">
+                                                                    <div class="pending-status-container">
+                                                                        <img src="/images/multi_svg/denied_status.svg" title="pending" alt="pending" class="pending_status">
+                                                                        <p class="text-overflow text-danger"> Expired </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                </div>
+                                                <!-- End Each -->
+
+
+                                            </div>
+                                            <!-- All List Container End -->
+
+                                        </div>
+                                    </div>
+                                    <!-- Left Cards ANd Events Tickets Show End-->
+
+                                    <!-- Right Profile Picture & Role -->
+                                    <div class="col-lg-4 lg-hide user-right-role">
+                                        <div class="white-card-border margin-bottom-1">
+                                           <div class="user_right_side_container">
+                                               
+                                               <a href="/creator/profile.html"> 
+                                                   <img src="/images/team/lmp.jpg" class="right_side_profile_picture" alt="">
+                                               </a>
+                                               
+                                               <a href="/creator/profile.html"> Lwin Moe Paing </a>
+                                               <p> Creator </p>
+
+                                           </div>
+                                        </div>
+
+                                        <div class="white-card-border margin-bottom-1">
+                                             <div class="right-side-logo-container">
+                                                <h4> Welcome to Pwal Daw </h4>
+                                                <img class="logo" src="/images/multi_svg/pwal_daw_logo.png" alt="">
+                                             </div>
+                                        </div>
+
+                                        <div class="white-card-border">
+                                                <div class="right-side-logo-container">
+                                                   <h5> Assigment Project for AceInspiration </h5>
+                                                   <a target="_blank" href="https://www.facebook.com/aceinspiration">
+                                                       <img  class="logo" src="/images/multi_svg/ace_inspiration.png" alt="">
+                                                   </a>
+                                                </div>
+                                           </div>
+
+                                    </div>
+                                    <!-- Right Profile Picture & Role -->
+                            
+                            </div>
+                            <!--User Page First Row End -->
+
+                        </div>
+                    <!-- Content HEre End -->
+
+                </div>
+            </section>
+            <!-- Content Section -->
+
+        </div>
+        <!-- Multi-Contianer Pwal Daw End -->
+
+
+    </main>
+    <!-- Main Content End-->
+
+    <!-- Modal For Setting -->
+    <div class="hide_display" id="model_box_setting_container">
+        <!-- Modal Container -->
+        <div class="model-box-opo" data-bg="" id="modal_box_opo">
+        </div>
+        <!-- Modal Container End-->
+        <div class="model-box-setting">
+                <ul>
+                    <li>
+                        <a href="/creator/profile.html"> Profile Setting </a>
+                    </li>
+                    <li>
+                        <a href="/"> Logout </a>
+                    </li>
+                    <li>
+                        <a href="#!" id="cancel_modal_setting_box"> Cancel  </a>
+                    </li>
+                </ul>
+        </div>
+    </div>
+    <!-- Modal For Setting End-->
+    
+
+    <!-- Loader -->
+    <div class="cover_loader_div" id="cover_loader_div">
+          
+            <div class="swapping-squares-spinner">
+                    <div class="square"></div>
+                    <div class="square"></div>
+                    <div class="square"></div>
+                    <div class="square"></div>
+            </div>
+
+            <h3> Pwal Daw </h3>
+
+    </div>
+    <!-- Loader End -->
+
+    
+</body>
+</html>

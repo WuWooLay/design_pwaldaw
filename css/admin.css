@@ -1,0 +1,165 @@
+.creator-add-container {
+    
+}
+
+.creator-add-container a {
+    opacity: 0.6;
+    text-decoration: none;
+    position: fixed;
+    bottom: 4.5rem;
+    right: 10%;
+    height: 2.65rem;
+    width: 2.65rem;
+    background-color: #fff;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('/images/admin/user_add.svg');
+
+}
+
+.creator-add-container a:hover {
+    opacity: 1;
+}
+
+/* Admin Page lists */
+.admin-page-lists a {
+    text-decoration: none;
+    display: block;
+    padding: 1rem;
+    color: #1da1f2;
+}
+
+.admin-page-lists img {
+    width: 4rem;
+    display:block;
+    margin: 0 auto;
+    margin-bottom: 0.5rem;
+}
+.admin-page-lists a:hover {
+    background-color: #f0f0f0;
+}
+
+
+
+
+
+
+
+.multi-container-fixed-bottom-nav  .fixed-bottom-nav a.events:before {
+    background-image: url(/images/admin/events.svg);
+}
+
+.multi-container-fixed-bottom-nav  .fixed-bottom-nav a.events:hover:before {
+    background-image: url(/images/admin/events_active.svg);
+}
+
+.multi-container-fixed-bottom-nav  .fixed-bottom-nav a.events.active:before {
+    background-image: url(/images/admin/events_active.svg);
+}
+
+.multi-container-fixed-bottom-nav  .fixed-bottom-nav a.creator:before {
+    background-image: url(/images/admin/creator.svg);
+}
+
+.multi-container-fixed-bottom-nav  .fixed-bottom-nav a.creator:hover:before {
+    background-image: url(/images/admin/creator_active.svg);
+}
+
+.multi-container-fixed-bottom-nav  .fixed-bottom-nav a.creator.active:before {
+    background-image: url(/images/admin/creator_active.svg);
+}
+
+.multi-container-fixed-bottom-nav  .fixed-bottom-nav a.normal:before {
+    background-image: url(/images/admin/normal.svg);
+}
+
+.multi-container-fixed-bottom-nav  .fixed-bottom-nav a.normal:hover:before {
+    background-image: url(/images/admin/normal_active.svg);
+}
+
+.multi-container-fixed-bottom-nav  .fixed-bottom-nav a.normal.active:before {
+    background-image: url(/images/admin/normal_active.svg);
+}
+
+.multi-container-fixed-bottom-nav  .fixed-bottom-nav a.transaction:before {
+    background-image: url(/images/admin/transaction.svg);
+}
+
+.multi-container-fixed-bottom-nav  .fixed-bottom-nav a.transaction:hover:before {
+    background-image: url(/images/admin/transaction_active.svg);
+}
+
+.multi-container-fixed-bottom-nav  .fixed-bottom-nav a.transaction.active:before {
+    background-image: url(/images/admin/transaction_active.svg);
+}
+
+
+
+
+
+.external_link > li > a.events:before {
+    background-image: url(/images/admin/events.svg);
+}
+
+.external_link > li > a.events:hover:before {
+    background-image: url(/images/admin/events_active.svg);
+}
+
+.external_link > li > a.events.active:before {
+    background-image: url(/images/admin/events_active.svg);
+}
+
+.external_link > li > a.creator:before {
+    background-image: url(/images/admin/creator.svg);
+}
+
+.external_link > li > a.creator:hover:before {
+    background-image: url(/images/admin/creator_active.svg);
+}
+
+.external_link > li > a.creator.active:before {
+    background-image: url(/images/admin/creator_active.svg);
+}
+
+.external_link > li > a.normal:before {
+    background-image: url(/images/admin/normal.svg);
+}
+
+.external_link > li > a.normal:hover:before {
+    background-image: url(/images/admin/normal_active.svg);
+}
+
+.external_link > li > a.normal.active:before {
+    background-image: url(/images/admin/normal_active.svg);
+}
+
+.external_link > li > a.transaction:before {
+    background-image: url(/images/admin/transaction.svg);
+}
+
+.external_link > li > a.transaction:hover:before {
+    background-image: url(/images/admin/transaction_active.svg);
+}
+
+.external_link > li > a.transaction.active:before {
+    background-image: url(/images/admin/transaction_active.svg);
+}
+
+.external_link > li > a.creator {
+    min-width: 84px;
+    padding-left: 1.5rem;
+}
+
+
+.external_link > li > a.normal {
+    min-width: 80px;
+    padding-left: 1.5rem;
+}
+
+.external_link > li > a.transaction {
+    min-width: 60px;
+    padding-left: 1.5rem;
+}
+
+

@@ -1,0 +1,145 @@
+.more-img-container {
+    height: 60vh;
+    border: 1px solid #efefef;
+    background-color: #fff;
+}
+
+.more-day-show,
+.more-time-show,
+.more-location {
+    display: inline-block;
+    padding: 0.75rem 0 0.2rem 1.7rem;
+    position: relative;
+    color: #a0a0a0;
+}
+
+.more-day-show:before,
+.more-time-show:before,
+.more-location:before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 58%;
+    left: 0;
+    width: 1.25rem;
+    height: 1.25rem;
+    transform: translateY(-50%);
+    background-color: transparent;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.more-day-show:before {
+    background-image: url('/images/multi_svg/more_start_date.svg');
+}
+
+.more-time-show:before {
+    background-image: url('/images/multi_svg/more_time.svg');
+}
+
+.more-location:before {
+    background-image: url('/images/multi_svg/more_location.svg');
+}
+
+/* Ticket Price And Table */
+
+.more-ticket {}
+
+.more-ticket-select-box {
+    border: 2px solid #cfcfcf;
+    background-color: #fff;
+    padding: 0.3rem;
+    margin-top: 0.5rem;
+    margin-left: 0.7rem;
+    width: 50%;
+}
+
+.more-total-text {
+    text-align: right;
+    padding-right: 3.5rem;
+
+}
+
+.more-buy-button {
+    padding-left: 1rem;
+}
+
+.buy-more-ripple {
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    top: 0.4rem;
+    right: 0;
+}
+
+
+/* Mordal Box */
+
+.model_box_pending_container {
+    position: fixed;
+    z-index: 4;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    width: 50vw;
+    animation: top-opa 0.5s ease-in-out 1 forwards ;
+}
+
+.model_box_pending_container > div {
+    background-color: #fff;
+    /* padding: 0.5rem; */
+    height: 50px;
+    border-radius: 50px;
+    line-height: 50px;
+    box-shadow: -1px 3px 8px 0px #7c7a7a;
+}
+
+.model_box_pending_container_svg {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 4px;
+}
+
+@keyframes top-opa {
+    0% {
+        opacity: 0.6;
+        top: 45%;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+        top: 50%;
+    }
+}
+
+
+@media screen and (max-width: 575px) {
+    .more-ticket {
+        background-color: #efefef;
+        margin-bottom: 0.5rem;
+    }
+
+    .more-total-text {
+        text-align: left;
+    }
+
+    .more-buy-button {
+       margin-bottom: 1rem;
+    }
+
+    .model_box_pending_container {
+        width: 80vw;
+    }
+
+    .model_box_pending_container > div {
+        font-size: 0.8rem;
+    }
+
+    .model_box_pending_container_svg {
+        right: 3px;
+    }
+}

@@ -1,0 +1,224 @@
+/*
+ * @ ALl StyleShees is Written By Lwin Moe Paing
+ * @ Designer => greenmoezat@facebook [ www.facebook.com/greenmoezat ]
+ * @ 2018 => ACE Assigment Project
+ */
+
+/* Home Container */
+.home_container {
+    /* width: 100vw; */
+    /* background-color: #fafafa; */
+}
+
+.home_container > div {
+    float:left;
+    min-height: 90vh;
+}
+
+.home_container:after {
+    content: " ";
+    display: block;
+    clear: both;
+}
+
+
+/* Left Home_Page Container */
+
+.home_page_left {
+    width: 49%;
+    height: 100%;
+    display: block;
+    background-color: rgb(29, 161, 242, 0.85) ;
+    color: white;
+    padding: 1rem 1.5rem;
+    position: relative;
+}
+
+  
+.home_page_left:after {
+    content: "";
+    background: url(/images/home_page/edm_wallpaper.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* opacity: 0.5; */
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;   
+}
+
+.home_page_left > header > h1 {
+    margin: 1rem 0 1.5rem 0;
+}
+
+
+/* Home_page Para List */
+.home_page_para_container {
+    margin-top: 4rem;
+}
+.home_page_list_para {
+    font-size: 1.5rem;
+    height: 6rem;
+    line-height: 6rem;
+    margin: 0;
+    overflow: hidden;
+    text-align: justify;
+    width: 80%;
+    margin:auto;
+    text-overflow: ellipsis;
+}
+
+.home_page_pre_icon {
+    width: 2.5rem;
+    position: relative;
+    display: inline-block;
+    top: 0.75rem;
+    margin-right: 1rem;
+}
+
+/* Svg  */
+
+.home_page_left_svg {
+    width: 40%;
+    margin: 1.5rem 0 0 3.5rem;
+}
+
+
+/* Right Home_page Container */
+.home_page_right {
+    width: 49%;
+    display: block;
+    padding: 1rem 1.5rem;
+}
+.home_page_right h3.nav_h3  {
+    display: none;
+}
+
+.home_page_right_first_form  input[type="text"],
+.home_page_right_first_form  input[type="password"]{
+    border: 1px solid #dfdfdf;
+    width: 100%;
+    padding: 0.85rem;
+    font-size: 1rem;
+}
+
+.forget_password {
+    padding-top: 0.76rem;
+    padding-left: 0.2rem;
+    text-decoration: none;
+    color: #afafaf;
+    display: block;
+}
+.forget_password:hover {
+    text-decoration: underline;
+}
+
+.sub-button {
+    outline: none;
+    font-size: 1rem;
+    border: 1px solid #1da1f2;
+    border-radius: 1.5rem;
+    padding: 0.85rem 1rem;
+    cursor: pointer;
+    background-color: #fff;
+    font-size: bold;
+    color: #1da1f2;
+    background-color: #eaf5fd;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.sub-button:hover {
+    box-shadow: 0 0 0px 2px #fff, 0 0 0px 4px #1da1f2;
+}
+
+/* Home_page Right Content */
+.home_page_right_content {
+    text-align: justify;
+    color: #527b9a;
+}
+
+
+.content-tag {
+    width: 100%;
+    margin: 0.75rem 0;
+    display: block;
+    font-size: 1rem;
+    border: 1px solid #1da1f2;
+    border-radius: 1.5rem;
+    padding: 0.85rem 1rem;
+    cursor: pointer;
+    background-color: #fff;
+    font-size: bold;
+    color: #1da1f2;
+    background-color: #eaf5fd;
+    transition: box-shadow 0.3s ease-in-out;
+    text-align: center;
+    text-decoration: none;
+}
+
+.content-tag.active {
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    background-color: #1da1f2;
+    color: #fff;
+}
+
+.content-tag.active:hover {
+    background-color: #006dbf;
+    color: #fff;
+}
+
+
+.content-tag:hover {
+    box-shadow: 0 0 0px 2px #fff, 0 0 0px 5px #1da1f2;
+}
+
+/* Home Page Right Logo */
+.home_page_right_logo {
+    width: 300px;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 767px)
+{
+    .home_page_left {
+        display: none;
+        visibility: hidden;
+    }
+
+    .home_page_right {
+        width: 100%;
+        padding: 0;
+    }
+
+    .home_page_right > div {
+        padding: 1rem 2rem;
+    }
+
+    .sub-button, .home_page_right_first_form  input[type="text"] {
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    .home_page_right h3.nav_h3  {
+        display: block;
+        background-color: #1da1f2;
+        margin: 0;
+        color: #fff;
+        padding: 1rem 1rem;
+    }
+
+    .home_page_right .nav_div {
+        padding: 0;
+    }
+    
+    div.home_page_right_content  {
+        text-align: center;
+    }
+
+    .home_page_right_logo {
+        width: 280px;
+    }
+}
